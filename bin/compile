@@ -10,7 +10,11 @@ echo "Info: BUILD_DIR=$BUILD_DIR"
 CACHE_DIR=$2
 echo "Info: CACHE_DIR=$CACHE_DIR"
 
+# som elogging
+env
+
 [ -z $GHC_VERSION ] && echo "Error: please set GHC_VERSION in environment" && exit 1
+
 
 ## CHECK BUILDPACK_GHC_BASE_URL is set
 if [ -z ${BUILDPACK_GHC_BASE_URL} ]; then
